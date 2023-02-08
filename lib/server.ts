@@ -9,9 +9,9 @@ export const getDonations = async (serviceKey: string) => {
     await extractSheets({
       spreadsheetKey: process.env.SHEET_KEY,
       credentials: credentials,
-      sheetsToExtract: ['donations'],
+      sheetsToExtract: ['ukraine_donations'],
     })
-  ).donations.map((d: any) => {
+  ).ukraine_donations.map((d: any) => {
     return {
       id:
         Math.floor(Math.random() * 5000) +
